@@ -24,5 +24,6 @@ public class SecondLargest{
             }
         }
         System.out.println("The second largest number is: "+second);
+        sc.close();
     }
 }
