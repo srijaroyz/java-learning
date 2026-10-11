@@ -2,6 +2,7 @@
 import java.util.Scanner;
 
 public class Duplicate {
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -11,7 +12,8 @@ public class Duplicate {
 
         int numbers[] = new int[n];
 
-        System.out.println("Enter the array elements:");
+        System.out.print("Enter the array elements: ");
+
         for (int i = 0; i < n; i++) {
             numbers[i] = sc.nextInt();
         }
@@ -19,8 +21,21 @@ public class Duplicate {
         System.out.println("Duplicate elements:");
 
         for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
 
+            boolean alreadyPrinted = false;
+
+            for (int j = 0; j < i; j++) {
+                if (numbers[i] == numbers[j]) {
+                    alreadyPrinted = true;
+                    break;
+                }
+            }
+
+            if (alreadyPrinted) {
+                continue;
+            }
+
+            for (int j = i + 1; j < n; j++) {
                 if (numbers[i] == numbers[j]) {
                     System.out.println(numbers[i]);
                     break;
