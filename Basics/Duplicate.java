@@ -11,9 +11,8 @@ public class Duplicate {
 
         int numbers[] = new int[n];
 
-        System.out.print("Enter the array elements: ");
-
         for (int i = 0; i < n; i++) {
+            System.out.print("Enter a number: ");
             numbers[i] = sc.nextInt();
         }
 
